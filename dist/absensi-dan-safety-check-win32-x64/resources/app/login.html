@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <div class="screen login-screen">
+      <h1 class="title">Absensi PT.UIR UNGGUL</h1>
+      <p class="subtitle">Silakan Login untuk Melanjutkan</p>
+      <input type="text" id="username" placeholder="Username" class="input-field">
+      <input type="password" id="password" placeholder="Password" class="input-field">
+      <button id="login-btn" class="btn primary-btn" onclick="handleLogin()">Login</button>
+    </div>
+  </div>
+  <script>
+    function handleLogin() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      if (username && password) {
+        window.location.href = "checklist.html";
+      } else {
+        alert("Masukkan username dan password!");
+      }
+    }
+  </script>
+</body>
+</html>

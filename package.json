@@ -1,0 +1,13 @@
+{
+  "name": "absensi-dan-safety-check",
+  "version": "1.0.0",
+  "description": "Aplikasi Sederhana untuk melakukan absensi dan safety check sebelum memulai pekerjaan.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^26.2.0",
+    "electron-packager": "^17.1.2"
+  }
+}

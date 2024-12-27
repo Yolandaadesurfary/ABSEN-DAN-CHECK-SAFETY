@@ -1,0 +1,193 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0b1a29, #142b3e);
+  color: #d1d5db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6), 0 0 50px #005f8c inset;
+  padding: 20px;
+}
+
+/* Tambahkan di styles.css */
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+#app {
+  margin-top: 10vh; /* Memberi ruang margin atas */
+  padding: 20px;
+}
+
+
+/* Typography */
+.title {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  color: #00d900;
+  text-shadow: 0 0 8px #00b8d9, 0 0 15px rgba(0, 184, 217, 0.5);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #9ca3af;
+}
+
+/* Inputs */
+.input-field {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 2px solid #005f8c;
+  border-radius: 8px;
+  color: #d1d5db;
+  transition: 0.3s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #00b8d9;
+  box-shadow: 0 0 10px #00b8d9;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin-top: 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg, #004466, #005f8c);
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 15px rgba(0, 95, 140, 0.4);
+}
+
+.primary-btn:hover {
+  background: linear-gradient(90deg, #005f8c, #00b8d9);
+  box-shadow: 0 0 20px #00b8d9, 0 0 30px rgba(0, 184, 217, 0.6);
+}
+
+/* Checklist Styles */
+.checklist {
+  list-style: none;
+  padding: 20px;
+  margin: 20px 0;
+  background: rgba(255, 255, 255, 0.06);
+  border: 2px solid #005f8c;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px #005f8c inset;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  color: #d1d5db;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 95, 140, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.checklist li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00b8d9, 0 0 30px rgba(0, 184, 217, 0.6);
+}
+
+.checklist li .icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #004466, #005f8c);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 95, 140, 0.4);
+}
+
+.checklist li input[type="checkbox"] {
+  margin-right: 15px;
+  accent-color: #005f8c;
+  width: 20px;
+  height: 20px;
+}
+
+.checklist li input[type="checkbox"]:checked ~ .icon {
+  background: linear-gradient(90deg, #00b8d9, #005f8c);
+  box-shadow: 0 0 20px #00b8d9, 0 0 40px rgba(0, 184, 217, 0.6);
+}
+
+.checklist li input[type="checkbox"]:checked ~ label {
+  text-decoration: line-through;
+  color: #00b8d9;
+  text-shadow: 0 0 10px #00b8d9;
+}
+
+/* Success Screen */
+.success-title {
+  font-size: 2.5rem;
+  color: #4caf50;
+  text-shadow: 0 0 10px #4caf50, 0 0 20px rgba(76, 175, 80, 0.6);
+}
+
+.animated-text {
+  font-size: 1.2rem;
+  color: #9ca3af;
+  animation: fadeIn 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}

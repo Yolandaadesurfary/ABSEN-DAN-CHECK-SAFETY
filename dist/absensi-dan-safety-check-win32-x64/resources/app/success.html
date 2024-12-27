@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Success</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <div class="screen success-screen">
+      <h1 class="title success-title">Anda Berhasil Absen</h1>
+      <p id="success-message" class="animated-text"></p> <!-- Pesan berhasil -->
+      <button id="back-to-home" class="btn primary-btn">Kembali ke Halaman Utama</button> <!-- Tombol kembali -->
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const loginTime = localStorage.getItem("loginTime"); // Ambil waktu login
+      const messageElement = document.getElementById("success-message");
+
+      if (loginTime) {
+        messageElement.textContent = `Anda Berhasil Login Pada ${loginTime}. Selamat Bekerja dan Tetaplah Menjaga Keselamatan!`;
+      }
+
+      // Tambahkan event listener untuk tombol kembali
+      const backToHomeButton = document.getElementById("back-to-home");
+      backToHomeButton.addEventListener("click", () => {
+        window.location.href = "login.html"; // Arahkan ke halaman login
+      });
+    });
+  </script>
+</body>
+</html>
